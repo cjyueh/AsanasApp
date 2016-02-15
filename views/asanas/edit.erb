@@ -1,0 +1,21 @@
+<h2>Edit Asanas</h2>
+
+<form action='/asanas/<%= "#{@asana.id}" %>' method="post">
+	<label for="asana[name]">Name:</label>
+	<input name="asana[name]" value='<%= "#{@asana.name}" %>'><br>
+
+	<label for="asana[translation]">Translation:</label>
+	<input name="asana[translation]" value='<%= "#{@asana.translation}" %>'><br>
+
+	<label for="asana[image]">Image:</label>
+	<input name="asana[image]" value='<%= "#{@asana.image}" %>'><br>
+
+	<label for="asana[asana_type]">Type:</label>
+	<input name="asana[asana_type]" value='<%= "#{@asana.asana_type}" %>'><br>
+
+	<label for="asana[similar_poses">Similar Poses:</label>
+	<input name="asana[similar_poses]" value='<%= "#{@asana.similar_poses}" %>'><br>
+
+	<input type="hidden" name="_method" value="patch"><br>
+	<input type="submit" value="UPDATE">
+</form>

@@ -1,0 +1,17 @@
+<h2><%= @asana.name %></h2><br>
+<h3>"<%= @asana.translation %>"</h3>
+<img src="<%= @asana.image %>">
+<h3>Type:</h3>
+<p><%= @asana.asana_type %></p>
+<h3>Similar Poses:</h3>
+<p><%= @asana.similar_poses %></p>
+
+<form class="delete" method="post" action="/asanas/<%= @asana.id %>">
+	<input type="hidden" name="_method" value="delete"><br>
+	<input type="submit" value="DELETE">
+</form>
+
+<form class="edit" method="post" action='/asanas/<%= "#{@asana.id}" %>/edit'>
+    <input type="hidden" name="_method" value="get"><br>
+    <input type="submit" value="EDIT">
+</form>
