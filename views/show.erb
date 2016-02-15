@@ -1,0 +1,10 @@
+<%= @asana.name %>
+<%= @asana.translation %>
+<%= @asana.image %>
+<%= @asana.similar_poses %>
+<%= @asana.details %>
+
+<form class="delete" method="POST" action="/asanas/<%= @asana.id %>">
+	<input type="hidden" name="_method" value="delete"><br>
+	<input type="submit" value="DELETE">
+</form>
