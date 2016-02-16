@@ -3,7 +3,7 @@
 </header>
 
 <h2 class="container">list of asanas</h2>
-<ul class="container">
+<ul class="container list-unstyled">
 	<% @asanas.each do |asana| %>
 		<li><a href="/asanas/<%= asana.id %>"><%= asana.name %></a></li>
 	<% end %>

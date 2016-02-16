@@ -15,7 +15,7 @@
 			<input class="form-control" name="asana[translation]" value='<%= "#{@asana.translation}" %>'>
 		</div>
 		<div class="form-group">
-			<label for="asana[image]">Image:</label>
+			<label for="asana[image]">Image URL:</label>
 			<input class="form-control" name="asana[image]" value='<%= "#{@asana.image}" %>'>
 		</div>
 		<div class="form-group">
@@ -33,7 +33,7 @@
 		</div>
 		<div class="form-group">
 			<label for="asana[similar_poses">Similar Poses:</label>
-			<input class="form-control" name="asana[similar_poses]" value='<%= "#{@asana.similar_poses}" %>'>
+			<input class="form-control" name="asana[similar_poses]" value='<%= "#{@asana.similar_poses}" %>' placeholder="none">
 		</div>
 	</article>
 	<input type="hidden" name="_method" value="patch"><br>
