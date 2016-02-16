@@ -1,21 +1,41 @@
-<h2>Edit Asanas</h2>
+<header>
+	<h1><a href="/asanas">yoga asanas</a></h1>
+</header>
+
+<h2 class="container">edit asana</h2>
 
 <form action='/asanas/<%= "#{@asana.id}" %>' method="post">
-	<label for="asana[name]">Name:</label>
-	<input name="asana[name]" value='<%= "#{@asana.name}" %>'><br>
-
-	<label for="asana[translation]">Translation:</label>
-	<input name="asana[translation]" value='<%= "#{@asana.translation}" %>'><br>
-
-	<label for="asana[image]">Image:</label>
-	<input name="asana[image]" value='<%= "#{@asana.image}" %>'><br>
-
-	<label for="asana[asana_type]">Type:</label>
-	<input name="asana[asana_type]" value='<%= "#{@asana.asana_type}" %>'><br>
-
-	<label for="asana[similar_poses">Similar Poses:</label>
-	<input name="asana[similar_poses]" value='<%= "#{@asana.similar_poses}" %>'><br>
-
+	<article class="container">
+		<div class="form-group">
+			<label for="asana[name]">Name:</label>
+			<input class="form-control" name="asana[name]" value='<%= "#{@asana.name}" %>'>
+		</div>
+		<div class="form-group">
+			<label for="asana[translation]">Translation:</label>
+			<input class="form-control" name="asana[translation]" value='<%= "#{@asana.translation}" %>'>
+		</div>
+		<div class="form-group">
+			<label for="asana[image]">Image:</label>
+			<input class="form-control" name="asana[image]" value='<%= "#{@asana.image}" %>'>
+		</div>
+		<div class="form-group">
+			<label for="asana[asana_type]">Type:</label>
+			<select class="form-control" name="asana[asana_type]" value='<%= "#{@asana.asana_type}" %>'>
+				<option>None</option>
+				<option>Arm Balance</option>
+				<option>Balance</option>
+				<option>Backbend</option>
+				<option>Inversion</option>
+				<option>Reclined</option>
+				<option>Standing</option>
+				<option>Seated</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="asana[similar_poses">Similar Poses:</label>
+			<input class="form-control" name="asana[similar_poses]" value='<%= "#{@asana.similar_poses}" %>'>
+		</div>
+	</article>
 	<input type="hidden" name="_method" value="patch"><br>
-	<input type="submit" value="UPDATE">
+	<footer><input class="btn" type="submit" value="UPDATE"></footer>
 </form>

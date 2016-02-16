@@ -21,7 +21,7 @@ class AsanasApp < Sinatra::Base
 	post '/asanas' do
 		@asana = Asana.create(params[:asana])
 		@asana.save #is this step necessary if using .create which is .new and .save in one step???
-		redirect '/'
+		redirect('/asanas')
 	end
 
 	#GET - get/show info for specific asana
